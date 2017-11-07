@@ -6,24 +6,12 @@ var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 
-// gulp.task('html', function() {
-//   gulp.src('./resources/assets/*.php')
-//       .pipe(gulp.dest('./resources/views'));
-// });
-
 gulp.task('sass', function() {
   gulp.src('./resources/sass/*.scss')
       .pipe(plumber())
       .pipe(sass({outputStyle: 'expanded'}))
       .pipe(autoprefixer())
       .pipe(gulp.dest('./css'));
-});
-
-gulp.task('js', function() {
-  gulp.src('./resources/js/*.js')
-      .pipe(concat('all.min.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('./js'));
 });
 
 gulp.task('img', function() {
