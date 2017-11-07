@@ -20,7 +20,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src('./resouces/js/*.js')
+  gulp.src('./resources/js/*.js')
       .pipe(concat('all.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest('./js'));
